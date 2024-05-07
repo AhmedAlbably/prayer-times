@@ -46,9 +46,9 @@ function prayerTimes() {
 }
 
 function getPrayerTimes(selectedCity) {
-  let url = `https://api.aladhan.com/v1/timingsByCity?country=EG&city=${selectedCity}`;
+  
 
-  fetch(url)
+  fetch(`https://api.aladhan.com/v1/timingsByCity?country=EG&city=${selectedCity}`)
     .then((response) => response.json())
     .then((data) => {
       let prayerTimesData = data.data.timings;
